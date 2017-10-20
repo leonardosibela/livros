@@ -1,0 +1,18 @@
+﻿<Window x:Class="Livros.ListagemDeLivros"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Livros"
+        mc:Ignorable="d"
+        Title="ListagemDeLivros" Height="300" Width="428.049">
+    <Grid>
+        <DataGrid x:Name="dtgLivros" HorizontalAlignment="Left" Margin="25,25,0,0" AutoGenerateColumns="False" VerticalAlignment="Top" Height="203" Width="342" SelectionChanged="dtgLivros_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=nome}" Header="Nome" />
+                <DataGridTextColumn Binding="{Binding Path=autor}" Header="Autor" />
+                <DataGridTextColumn Binding="{Binding Path=valor, ConverterCulture='pt-BR', StringFormat=c}" Header="Valor" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
